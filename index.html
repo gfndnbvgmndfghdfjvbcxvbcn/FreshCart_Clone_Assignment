@@ -1,0 +1,1700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script type="text/javascript" src="https://livejs.com/live.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        @media screen and (min-width: 991px) {
+            .nav-dropdown:hover .dropdown-menu {
+                display: block;
+            }
+
+            .MyAccount_dropdown:hover .MyAccount_dropdown-menu {
+                display: block;
+            }
+        }
+
+        .Search_Bar:focus {
+            box-shadow: 0px 0px 0px 5px rgba(10, 173, 10, 0.2);
+        }
+
+        .MyAccount_dropdown-menu {
+            display: none;
+        }
+
+        .Popular-Item:hover .Hover_Images {
+            display: block !important;
+        }
+
+        .Best-Item:hover .Hover_Images {
+            display: block !important;
+        }
+
+        .Hover-Button:hover {
+            background-color: rgb(10, 173, 10) !important;
+            border: none;
+        }
+
+        .Second_Nav_Bar {
+            display: none;
+        }
+
+        .Featured-Item:hover,
+        .Popular-Item:hover,
+        .Best-Item:hover {
+            border-color: rgb(10, 173, 10) !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="upper row bg-body-secondary px-lg-5 px-md-3 px-sm-0 w-100 m-0">
+        <div class="col">
+            <h5 class="fs-6 text-lg-start text-md-start text-center fst-normal">Super Value Deals - Save more with
+                coupons</h5>
+        </div>
+        <div class="col-auto d-none d-md-block d-sm-block">
+            <div class="dropdown text-end">
+                <img src="Images/Header_Icon_1.svg" alt="DropDown_Icon" width="20" height="20"> English
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item text-end" href="#"><img src="Images/Header_Icon_1.svg"
+                                alt="DropDown_Icon"> English</a></li>
+                    <li><a class="dropdown-item text-end" href="#"><img src="Images/Header_Icon_2.svg"
+                                alt="DropDown_Icon"> Deutsch</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="Nav_Bar border-bottom border-dark px-lg-5 px-md-3 px-sm-0" style="--bs-border-opacity: .1;">
+        <nav class="navbar bg-body-white">
+            <div class="container-fluid gap-0 gap-lg-5">
+                <a class="navbar-brand" href="#"><img src="Images/Web_Logo.svg" alt="Web_Logo"></a>
+
+                <form class="d-flex w-50 d-none d-sm-flex gap-2" role="search">
+                    <div class="position-relative w-50 d-md-none d-lg-block">
+                        <input class="Search_Bar form-control me-2 border-dark-subtle ps-5" type="search"
+                            placeholder="Search for products" aria-label="Search"
+                            style="outline-color: rgb(10, 173, 10);">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-3 text-secondary"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </div>
+
+                    <button
+                        class="btn location_button btn-outline-dark border-dark-subtle text-black fw-bold opacity-50 d-flex gap-2 d-md-none d-lg-block"
+                        type="submit"><img src="Images/Section_2_Image_2.svg"> Location
+                    </button>
+                </form>
+
+                <div class="Images d-flex justify-content-center align-items-center gap-0">
+                    <button type="button" class="btn btn-white position-relative">
+                        <img src="Images/Section_2_Image_3.svg">
+                        <span
+                            class="position-absolute top-30 start-70 translate-middle w-50 h-55 border border-light rounded-circle text-white fw-bold"
+                            style="background-color: rgb(10, 173, 10);">
+                            4
+                        </span>
+                    </button>
+                    <img src="Images/Section_2_Image_4.svg">
+                    <button type="button" class="btn btn-white position-relative">
+                        <img src="Images/Section_2_Image_5.svg">
+                        <span
+                            class="position-absolute top-30 start-70 translate-middle w-50 h-55 border border-light rounded-circle text-white fw-bold"
+                            style="background-color: rgb(10, 173, 10);">
+                            5
+                        </span>
+                    </button>
+                </div>
+
+                <button class="btn d-lg-none d-sm-block bg-white" type="button" id="toggleButton">
+                    <img class="d-lg-none d-sm-block" src="Images/Section_2_Image_10.svg">
+                </button>
+            </div>
+        </nav>
+
+        <nav class="navbar bg-body-white d-none d-md-none d-lg-block d-sm-block">
+            <div class="d-flex justify-content-start bg-body-white">
+                <div class="nav-dropdown px-2">
+                    <button class="btn text-white border-0 dropdown-toggle" style="background-color: rgb(10, 173, 10);"
+                        type="button">
+                        <img src="Images/Section_2_Image_6.svg" alt=""> All Department
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item text-end" href="#">Dairy, Bread & Eggs</a></li>
+                        <li><a class="dropdown-item text-end" href="#">Snacks & Munchies</a></li>
+                        <li><a class="dropdown-item text-end" href="#">Fruits & Vegetables</a></li>
+                        <li><a class="dropdown-item text-end" href="#">Cold Drinks & Juices</a></li>
+                        <li><a class="dropdown-item text-end" href="#">Breakfast & Instant Food</a></li>
+                        <li><a class="dropdown-item text-end" href="#">Bakery & Biscuits</a></li>
+                        <li><a class="dropdown-item text-end" href="#">Chicken, Meat & Fish</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-dropdown px-2">
+                    <button class="btn bg-body-white text-black border-0 dropdown-toggle" type="button">Home</button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item text-end" href="#">Home Default</a></li>
+                        <li><a class="dropdown-item text-end" href="#">Home Modern</a></li>
+                        <li><a class="dropdown-item text-end" href="#">Home Creative</a></li>
+                        <li><a class="dropdown-item text-end" href="#">Home Local Store</a></li>
+                        <li><a class="dropdown-item text-end" href="#">Home Minimalist</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-dropdown px-2">
+                    <button class="btn bg-body-white text-black border-0 dropdown-toggle" type="button">Shop</button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item text-end" href="#">Shop Grid - Filter</a></li>
+                        <li><a class="dropdown-item text-end" href="#">Shop List - Filter</a></li>
+                        <li><a class="dropdown-item text-end" href="#">Shop - Filter</a></li>
+                        <li><a class="dropdown-item text-end" href="#">Shop Wide</a></li>
+                        <li><a class="dropdown-item text-end" href="#">Shop Single</a></li>
+                        <li><a class="dropdown-item text-end" href="#">Shop Single v2</a></li>
+                        <li><a class="dropdown-item text-end" href="#">Shop Wishlist</a></li>
+                        <li><a class="dropdown-item text-end" href="#">Shop Cart</a></li>
+                        <li><a class="dropdown-item text-end" href="#">Shop Checkout</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-dropdown px-2">
+                    <button class="btn bg-body-white text-black border-0 dropdown-toggle" type="button">Stores</button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item text-end" href="#">Store List</a></li>
+                        <li><a class="dropdown-item text-end" href="#">Store Grid</a></li>
+                        <li><a class="dropdown-item text-end" href="#">Store Single</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-dropdown px-2">
+                    <button class="btn bg-body-white text-black border-0 dropdown-toggle" type="button">Mega
+                        Menu</button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item text-end" href="#"></a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-dropdown px-2">
+                    <button class="btn bg-body-white text-black border-0 dropdown-toggle" type="button">Pages</button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item text-end" href="#">Blog</a></li>
+                        <li><a class="dropdown-item text-end" href="#">Blog Single</a></li>
+                        <li><a class="dropdown-item text-end" href="#">Blog Category</a></li>
+                        <li><a class="dropdown-item text-end" href="#">About us</a></li>
+                        <li><a class="dropdown-item text-end" href="#">404 Error</a></li>
+                        <li><a class="dropdown-item text-end" href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-dropdown px-2">
+                    <button class="btn bg-body-white text-black border-0 dropdown-toggle" type="button">Account</button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item text-end" href="#">Sign in</a></li>
+                        <li><a class="dropdown-item text-end" href="#">Signup</a></li>
+                        <li><a class="dropdown-item text-end" href="#">Forgot Password</a></li>
+                        <div class="MyAccount_dropdown">
+                            <a class="dropdown-item dropdown-toggle text-end" href="#">My Account</a>
+                            <div class="MyAccount_dropdown-menu">
+                                <a class="dropdown-item text-end" href="#">Orders</a>
+                                <a class="dropdown-item text-end" href="#">Settings</a>
+                                <a class="dropdown-item text-end" href="#">Address</a>
+                                <a class="dropdown-item text-end" href="#">Payment Method</a>
+                                <a class="dropdown-item text-end" href="#">Notification</a>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="nav-dropdown px-2">
+                    <button class="btn bg-body-white text-black border-0" type="button">Dashboard</button>
+                </div>
+
+                <div class="nav-dropdown px-2">
+                    <button class="btn bg-body-white text-black border-0 dropdown-toggle" type="button">Docs</button>
+                    <div class="dropdown-menu">
+                        <button class="btn bg-body-white text-black border-0 d-flex align-items-center">
+                            <img src="Images/Section_2_Image_8.svg" width="60" height="60" alt="">
+                            <div class="d-flex flex-column align-items-start">
+                                <p>Documentation</p>
+                                <p>Browse the all documentation</p>
+                            </div>
+                        </button>
+                        <button class="btn bg-body-white text-black border-0 d-flex align-items-center">
+                            <img src="Images/Section_2_Image_9.svg" width="60" height="60" alt="">
+                            <div class="d-flex flex-column align-items-start">
+                                <p>Changelog v1.0.0</p>
+                                <p>Browse the all documentation</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="Second_Nav_Bar">
+        <nav class="navbar  bg-body-white">
+            <div class="container-fluid gap-5">
+                <a class="navbar-brand" href="#"><img src="Images/Web_Logo.svg" alt="Web_Logo"></a>
+                <button type="button" class="btn btn-close" id="closeButton"></button>
+
+                <form class="d-flex justify-content-center w-100" role="search">
+                    <input class="form-control me-2 outline-light border-dark-subtle w-100" type="search"
+                        placeholder="Search for products" aria-label="Search">
+                </form>
+
+                <div class="d-flex flex-column bg-body-white">
+                    <div class="nav-dropdown w-100">
+                        <button class="btn text-white border-0 dropdown-toggle w-100"
+                            style="background-color: rgb(10, 173, 10);" type="button" data-bs-toggle="dropdown">
+                            <img src="Images/Section_2_Image_6.svg" alt=""> All Department
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-end" href="#">Dairy, Bread & Eggs</a></li>
+                            <li><a class="dropdown-item text-end" href="#">Snacks & Munchies</a></li>
+                            <li><a class="dropdown-item text-end" href="#">Fruits & Vegetables</a></li>
+                            <li><a class="dropdown-item text-end" href="#">Cold Drinks & Juices</a></li>
+                            <li><a class="dropdown-item text-end" href="#">Breakfast & Instant Food</a></li>
+                            <li><a class="dropdown-item text-end" href="#">Bakery & Biscuits</a></li>
+                            <li><a class="dropdown-item text-end" href="#">Chicken, Meat & Fish</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-dropdown">
+                        <button class="btn bg-body-white text-black border-0 dropdown-toggle" type="button"
+                            data-bs-toggle="dropdown">Home</button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-end" href="#">Home Default</a></li>
+                            <li><a class="dropdown-item text-end" href="#">Home Modern</a></li>
+                            <li><a class="dropdown-item text-end" href="#">Home Creative</a></li>
+                            <li><a class="dropdown-item text-end" href="#">Home Local Store</a></li>
+                            <li><a class="dropdown-item text-end" href="#">Home Minimalist</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-dropdown">
+                        <button class="btn bg-body-white text-black border-0 dropdown-toggle" type="button"
+                            data-bs-toggle="dropdown">Shop</button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-end" href="#">Shop Grid - Filter</a></li>
+                            <li><a class="dropdown-item text-end" href="#">Shop List - Filter</a></li>
+                            <li><a class="dropdown-item text-end" href="#">Shop - Filter</a></li>
+                            <li><a class="dropdown-item text-end" href="#">Shop Wide</a></li>
+                            <li><a class="dropdown-item text-end" href="#">Shop Single</a></li>
+                            <li><a class="dropdown-item text-end" href="#">Shop Single v2</a></li>
+                            <li><a class="dropdown-item text-end" href="#">Shop Wishlist</a></li>
+                            <li><a class="dropdown-item text-end" href="#">Shop Cart</a></li>
+                            <li><a class="dropdown-item text-end" href="#">Shop Checkout</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-dropdown">
+                        <button class="btn bg-body-white text-black border-0 dropdown-toggle" type="button"
+                            data-bs-toggle="dropdown">Stores</button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-end" href="#">Store List</a></li>
+                            <li><a class="dropdown-item text-end" href="#">Store Grid</a></li>
+                            <li><a class="dropdown-item text-end" href="#">Store Single</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-dropdown">
+                        <button class="btn bg-body-white text-black border-0 dropdown-toggle" type="button"
+                            data-bs-toggle="dropdown">Mega
+                            Menu</button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-end" href="#"></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-dropdown">
+                        <button class="btn bg-body-white text-black border-0 dropdown-toggle" type="button"
+                            data-bs-toggle="dropdown">Pages</button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-end" href="#">Blog</a></li>
+                            <li><a class="dropdown-item text-end" href="#">Blog Single</a></li>
+                            <li><a class="dropdown-item text-end" href="#">Blog Category</a></li>
+                            <li><a class="dropdown-item text-end" href="#">About us</a></li>
+                            <li><a class="dropdown-item text-end" href="#">404 Error</a></li>
+                            <li><a class="dropdown-item text-end" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-dropdown">
+                        <button class="btn bg-body-white text-black border-0 dropdown-toggle" type="button"
+                            data-bs-toggle="dropdown">Account</button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-end" href="#">Sign in</a></li>
+                            <li><a class="dropdown-item text-end" href="#">Signup</a></li>
+                            <li><a class="dropdown-item text-end" href="#">Forgot Password</a></li>
+                            <div class="dropdown">
+                                <a class="dropdown-item dropdown-toggle text-end" href="#"
+                                    data-bs-toggle="MyAccount_dropdown-menu">My Account</a>
+                                <div class="MyAccount_dropdown-menu">
+                                    <a class="dropdown-item text-end" href="#">Orders</a>
+                                    <a class="dropdown-item text-end" href="#">Settings</a>
+                                    <a class="dropdown-item text-end" href="#">Address</a>
+                                    <a class="dropdown-item text-end" href="#">Payment Method</a>
+                                    <a class="dropdown-item text-end" href="#">Notification</a>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+
+                    <div class="nav-dropdown">
+                        <button class="btn bg-body-white text-black border-0" type="button">Dashboard</button>
+                    </div>
+
+                    <div class="nav-dropdown">
+                        <button class="btn bg-body-white text-black border-0 dropdown-toggle" type="button"
+                            data-bs-toggle="dropdown">Docs</button>
+                        <div class="dropdown-menu">
+                            <button class="btn bg-body-white text-black border-0 d-flex align-items-center">
+                                <img src="Images/Section_2_Image_8.svg" width="60" height="60" alt="">
+                                <div class="d-flex flex-column align-items-start">
+                                    <p>Documentation</p>
+                                    <p>Browse the all documentation</p>
+                                </div>
+                            </button>
+                            <button class="btn bg-body-white text-black border-0 d-flex align-items-center">
+                                <img src="Images/Section_2_Image_9.svg" width="60" height="60" alt="">
+                                <div class="d-flex flex-column align-items-start">
+                                    <p>Changelog v1.0.0</p>
+                                    <p>Browse the all documentation</p>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="Web-Body">
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade px-lg-5 px-md-3 px-sm-2 m-2 mt-5">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                    class="active py-1  bg-black rounded-circle" aria-current="true" aria-label="Slide 1"
+                    style="width: 12px;"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    class="py-1  bg-black rounded-circle" aria-current="true" aria-label="Slide 1"
+                    style="width: 12px;"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="px-sm-2"
+                        style="background: url(Images/Section_3_Image_1.jpg) center center / cover no-repeat; border-radius: 0.5rem;">
+                        <div class="ps-lg-12 py-lg-16 py-14 px-4 text-xs-center col-xxl-5 col-md-7"
+                            style="padding: 4rem;">
+                            <span class="custom-badge text-bg-warning badge rounded-pill bg-warning">Opening Sale
+                                Discount
+                                50%</span>
+                            <h2 class="text-dark display-5 fw-bold mt-4">SuperMarket For Fresh Grocery</h2>
+                            <p class="lead fw-bold opacity-50"> Introduced a new model for online grocery shopping and
+                                convenient home
+                                delivery.</p>
+                            <a role="button" tabindex="0" href="" class="mt-3 btn btn-dark">Show Now <img
+                                    src="Images/Section_3_Image_4.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-item active">
+                        <div class="px-sm-2"
+                            style="background: url(Images/Section_3_Image_2.jpg) center center / cover no-repeat; border-radius: 0.5rem;">
+                            <div class="ps-lg-12 py-lg-16 py-14 px-4 text-xs-center col-xxl-5 col-md-7"
+                                style="padding: 4rem;"><span
+                                    class="custom-badge text-bg-warning badge rounded-pill bg-warning">Free Shipping -
+                                    orders over
+                                    $100</span>
+                                <h2 class="text-dark display-5 fw-bold mt-4">Free Shipping on orders over<span
+                                        style="color: rgb(10, 173, 10);">
+                                        $100</span></h2>
+                                <p class="lead fw-bold opacity-50">Free Shipping to First-Time Customers Only, After
+                                    promotions and discounts
+                                    are applied.</p>
+                                <a role="button" tabindex="0" href="" class="mt-3 btn btn-dark">Show Now<img
+                                        src="Images/Section_3_Image_4.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="div d-flex justify-content-between px-lg-5 px-md-3 px-sm-0 px-2 mt-3">
+            <div class="text">
+                <h2>Featured Categories</h2>
+            </div>
+            <div>
+                <button class="btn bg-body-secondary btn-outline-dark rounded-circle border-0"><img class="h-90 w-90"
+                        src="Images/Section_4_Image_13.svg"></button>
+                <button class="btn bg-body-secondary btn-outline-dark rounded-circle border-0"><img class="h-90 w-90"
+                        src="Images/Section_4_Image_14.svg"></button>
+            </div>
+        </div>
+
+        <div class="text-center px-lg-5 px-md-3 px-sm-0 px-2 mt-3">
+            <div class="row w-100 m-0 d-flex justify-content-center g-4">
+
+                <div class="col-12 col-sm-6 col-md-3 col-lg-2 d-none d-md-block d-lg-block ">
+                    <div class="card d-flex align-items-center h-100 Featured-Item">
+                        <img src="Images/Section_4_Image_1.jpg" class="card-img-top w-50 h-50 mt-3">
+                        <div class="card-body">
+                            <p class="card-text">Dairy, Bread & Eggs</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-3 col-lg-2 d-none d-md-block d-lg-block">
+                    <div class="card d-flex align-items-center h-100 Featured-Item">
+                        <img src="Images/Section_4_Image_2.jpg" class="card-img-top w-50 h-50 mt-3">
+                        <div class="card-body">
+                            <p class="card-text">Snacks & Munchies</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-3 col-lg-2 w-50 d-lg-none d-md-none d-sm-block">
+                    <div class="card d-flex align-items-center h-100 Featured-Item">
+                        <img src="Images/Section_4_Image_1.jpg" class="card-img-top w-50 h-50 mt-3">
+                        <div class="card-body">
+                            <p class="card-text">Dairy, Bread & Eggs</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-3 col-lg-2 w-50 d-lg-none d-md-none d-sm-block">
+                    <div class="card d-flex align-items-center h-100 Featured-Item">
+                        <img src="Images/Section_4_Image_2.jpg" class="card-img-top w-50 h-50 mt-3">
+                        <div class="card-body">
+                            <p class="card-text">Snacks & Munchies</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-3 col-lg-2 d-none d-md-block d-lg-block">
+                    <div class="card d-flex align-items-center h-100 Featured-Item">
+                        <img src="Images/Section_4_Image_3.jpg" class="card-img-top w-50 h-50 mt-3">
+                        <div class="card-body">
+                            <p class="card-text">Bakery & Biscuits</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-3 col-lg-2 d-none d-md-block d-lg-block">
+                    <div class="card d-flex align-items-center h-100 Featured-Item">
+                        <img src="Images/Section_4_Image_4.jpg" class="card-img-top w-50 h-50 mt-3">
+                        <div class="card-body">
+                            <p class="card-text">Instant Food</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-3 col-lg-2 d-none d-lg-block">
+                    <div class="card d-flex align-items-center h-100 Featured-Item">
+                        <img src="Images/Section_4_Image_5.jpg" class="card-img-top w-50 h-50 mt-3">
+                        <div class="card-body">
+                            <p class="card-text">Tea, Coffee & Drinks</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-3 col-lg-2 d-none d-lg-block">
+                    <div class="card d-flex align-items-center h-100 Featured-Item">
+                        <img src="Images/Section_4_Image_6.jpg" class="card-img-top w-50 h-50 mt-3">
+                        <div class="card-body">
+                            <p class="card-text">Atta, Rice & Dal</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-start px-lg-5 px-md-3 px-sm-0 px-2 mt-3">
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 m-0">
+                <div class="col mb-2">
+                    <div class="px-sm-2"
+                        style="background: url(Images/Section_5_Image_1.png) center center / cover no-repeat; border-radius: 0.5rem;">
+                        <div class="ps-lg-12 py-lg-16 py-14 px-4 text-xs-center col-xxl-5 col-md-7"
+                            style="padding: 2rem;">
+                            <h2 class="text-dark display-5 fs-3 fw-bold mt-4">Fruits & Vegetables</h2>
+                            <p class="lead fw-bold opacity-50">Get Upto 30% Off.</p>
+                            <a role="button" tabindex="0" href="" class="mt-3 btn btn-dark">Show Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="px-sm-2"
+                        style="background: url(Images/Section_5_Image_2.jpg) center center / cover no-repeat; border-radius: 0.5rem;">
+                        <div class="ps-lg-12 py-lg-16 py-14 px-4 text-xs-center col-xxl-5 col-md-7"
+                            style="padding: 2rem;">
+                            <h2 class="text-dark display-5 fs-3 fw-bold mt-4">Freshly Baked Buns</h2>
+                            <p class="lead fw-bold opacity-50">Get Upto 25% Off</p>
+                            <a role="button" tabindex="0" href="" class="mt-3 btn btn-dark">Show Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="px-2 px-md-3 px-lg-5">
+            <h2 class="ps-2">Popular Products</h2>
+            <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-3 m-0">
+                <div class="col mb-3">
+                    <div class="card h-100 Popular-Item">
+                        <img src="Images/Section_6_Image_1.jpg" class="card-img-top p-3 position-relative">
+                        <span class="position-absolute translate-middle badge rounded bg-danger"
+                            style="top: 2rem; left: 2rem;">
+                            Sale
+                        </span>
+                        <span class="position-absolute translate-middle badge rounded bg-success"
+                            style="top: 4rem; left: 2rem;">
+                            10%
+                        </span>
+                        <div class="Hover_Images fill-white position-absolute d-none" style="top: 50%; left: 30%;">
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_16.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_17.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_18.svg">
+                            </button>
+                        </div>
+                        <div class="Hover_Images fill-white position-absolute d-none" style="top: 50%; left: 30%;">
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_16.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_17.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_18.svg">
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <p class="Item_Category">Snacks & Munchies</p>
+                            <h5 class="card-title">Haldiram's Sev Bhujia</h5>
+
+                            <div class="Rating d-flex gap-2 align-items-baseline">
+                                <div>
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_20.svg">
+                                </div>
+
+                                <p>4.3 <span>(4)</span></p>
+                            </div>
+
+                            <div class="Prize_Add d-flex align-items-end justify-content-between mt-2">
+                                <h6 class="Item_Prize">$21.6 <del id="old_Prize">$24</del></h6>
+                                <button class="btn border-0 text-white" style="background-color: rgb(10, 173, 10);">+
+                                    Add</button>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col mb-3">
+                    <div class="card h-100 Popular-Item">
+                        <img src="Images/Section_6_Image_2.jpg" class="card-img-top p-3">
+                        <div class="Hover_Images fill-white position-absolute d-none" style="top: 50%; left: 30%;">
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_16.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_17.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_18.svg">
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <p class="Item_Category">Bakery & Biscuits</p>
+                            <h5 class="card-title">NutriChoice Digestive</h5>
+
+                            <div class="Rating d-flex gap-2 align-items-baseline">
+                                <div>
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_20.svg">
+                                </div>
+
+                                <p>4.3 <span>(4)</span></p>
+                            </div>
+
+                            <div class="Prize_Add d-flex align-items-end justify-content-between mt-2">
+                                <h6 class="Item_Prize">$21.6 <del id="old_Prize">$24</del></h6>
+                                <button class="btn border-0 text-white" style="background-color: rgb(10, 173, 10);">+
+                                    Add</button>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col mb-3">
+                    <div class="card h-100 Popular-Item">
+                        <img src="Images/Section_6_Image_3.jpg" class="card-img-top p-3 position-relative">
+                        <span class="position-absolute translate-middle badge rounded bg-danger"
+                            style="top: 2rem; left: 5rem;">
+                            Buy 1 Get $4.00 Off
+                        </span>
+                        <div class="Hover_Images fill-white position-absolute d-none" style="top: 50%; left: 30%;">
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_16.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_17.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_18.svg">
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <p class="Item_Category">Bakery & Biscuits</p>
+                            <h5 class="card-title">Cadbury 5 Start Chocolate</h5>
+
+                            <div class="Rating d-flex gap-2 align-items-baseline">
+                                <div>
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_20.svg">
+                                </div>
+
+                                <p>4.3 <span>(4)</span></p>
+                            </div>
+
+                            <div class="Prize_Add d-flex align-items-end justify-content-between mt-2">
+                                <h6 class="Item_Prize">$21.6 <del id="old_Prize">$24</del></h6>
+                                <button class="btn border-0 text-white" style="background-color: rgb(10, 173, 10);">+
+                                    Add</button>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col mb-3">
+                    <div class="card h-100 Popular-Item">
+                        <img src="Images/Section_6_Image_4.jpg" class="card-img-top p-3 position-relative">
+                        <span class="position-absolute translate-middle badge rounded bg-danger"
+                            style="top: 2rem; left: 2rem;">
+                            Hot
+                        </span>
+                        <span class="position-absolute translate-middle badge rounded bg-success"
+                            style="top: 4rem; left: 2rem;">
+                            40%
+                        </span>
+                        <div class="Hover_Images fill-white position-absolute d-none" style="top: 50%; left: 30%;">
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_16.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_17.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_18.svg">
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <p class="Item_Category">Snack & Munchies</p>
+                            <h5 class="card-title">Onion Flavour Potato</h5>
+
+                            <div class="Rating d-flex gap-2 align-items-baseline">
+                                <div>
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_20.svg">
+                                </div>
+
+                                <p>4.3 <span>(4)</span></p>
+                            </div>
+
+                            <div class="Prize_Add d-flex align-items-end justify-content-between mt-2">
+                                <h6 class="Item_Prize">$21.6 <del id="old_Prize">$24</del></h6>
+                                <button class="btn border-0 text-white" style="background-color: rgb(10, 173, 10);">+
+                                    Add</button>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col mb-3">
+                    <div class="card h-100 Popular-Item">
+                        <img src="Images/Section_6_Image_5.jpg" class="card-img-top p-3 position-relative">
+                        <span class="position-absolute translate-middle badge rounded bg-success"
+                            style="top: 2rem; left: 2rem;">
+                            35%
+                        </span>
+                        <div class="Hover_Images fill-white position-absolute d-none" style="top: 50%; left: 30%;">
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_16.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_17.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_18.svg">
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <p class="Item_Category">Instant Food</p>
+                            <h5 class="card-title">Salted Instant Popcorn</h5>
+
+                            <div class="Rating d-flex gap-2 align-items-baseline">
+                                <div>
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_20.svg">
+                                </div>
+
+                                <p>4.3 <span>(4)</span></p>
+                            </div>
+
+                            <div class="Prize_Add d-flex align-items-end justify-content-between mt-2">
+                                <h6 class="Item_Prize">$21.6 <del id="old_Prize">$24</del></h6>
+                                <button class="btn border-0 text-white" style="background-color: rgb(10, 173, 10);">+
+                                    Add</button>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col mb-3">
+                    <div class="card h-100 Popular-Item">
+                        <img src="Images/Section_6_Image_3.jpg" class="card-img-top p-3 position-relative">
+                        <span class="position-absolute translate-middle badge rounded bg-danger"
+                            style="top: 2rem; left: 5rem;">
+                            Buy 1 Get $4.00 Off
+                        </span>
+                        <div class="Hover_Images fill-white position-absolute d-none" style="top: 50%; left: 30%;">
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_16.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_17.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_18.svg">
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <p class="Item_Category">Bakery & Biscuits</p>
+                            <h5 class="card-title">Cadbury 5 Start Chocolate</h5>
+
+                            <div class="Rating d-flex gap-2 align-items-baseline">
+                                <div>
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_20.svg">
+                                </div>
+
+                                <p>4.3 <span>(4)</span></p>
+                            </div>
+
+                            <div class="Prize_Add d-flex align-items-end justify-content-between mt-2">
+                                <h6 class="Item_Prize">$21.6 <del id="old_Prize">$24</del></h6>
+                                <button class="btn border-0 text-white" style="background-color: rgb(10, 173, 10);">+
+                                    Add</button>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col mb-3">
+                    <div class="card h-100 Popular-Item">
+                        <img src="Images/Section_6_Image_7.jpg" class="card-img-top p-3 position-relative">
+                        <span class="position-absolute translate-middle badge rounded bg-danger"
+                            style="top: 2rem; left: 2rem;">
+                            Sale
+                        </span>
+                        <span class="position-absolute translate-middle badge rounded bg-success"
+                            style="top: 4rem; left: 2rem;">
+                            10%
+                        </span>
+                        <div class="Hover_Images fill-white position-absolute d-none" style="top: 50%; left: 30%;">
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_16.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_17.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_18.svg">
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <p class="Item_Category">Snacks & Munchies</p>
+                            <h5 class="card-title">Haldiram's Sev Bhujia</h5>
+
+                            <div class="Rating d-flex gap-2 align-items-baseline">
+                                <div>
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_20.svg">
+                                </div>
+
+                                <p>4.3 <span>(4)</span></p>
+                            </div>
+
+                            <div class="Prize_Add d-flex align-items-end justify-content-between mt-2">
+                                <h6 class="Item_Prize">$21.6 <del id="old_Prize">$24</del></h6>
+                                <button class="btn border-0 text-white" style="background-color: rgb(10, 173, 10);">+
+                                    Add</button>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col mb-3">
+                    <div class="card h-100 Popular-Item">
+                        <img src="Images/Section_6_Image_8.jpg" class="card-img-top p-3 position-relative">
+                        <span class="position-absolute translate-middle badge rounded bg-success"
+                            style="top: 2rem; left: 2rem;">
+                            40%
+                        </span>
+                        <div class="Hover_Images fill-white position-absolute d-none" style="top: 50%; left: 30%;">
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_16.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_17.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_18.svg">
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <p class="Item_Category">Dairy, Bread & Eggs</p>
+                            <h5 class="card-title">Blueberry Greek Yogurt</h5>
+
+                            <div class="Rating d-flex gap-2 align-items-baseline">
+                                <div>
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_20.svg">
+                                </div>
+
+                                <p>4.3 <span>(4)</span></p>
+                            </div>
+
+                            <div class="Prize_Add d-flex align-items-end justify-content-between mt-2">
+                                <h6 class="Item_Prize">$21.6 <del id="old_Prize">$24</del></h6>
+                                <button class="btn border-0 text-white" style="background-color: rgb(10, 173, 10);">+
+                                    Add</button>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col mb-3">
+                    <div class="card h-100 Popular-Item">
+                        <img src="Images/Section_6_Image_9.jpg" class="card-img-top p-3">
+                        <div class="Hover_Images fill-white position-absolute d-none" style="top: 50%; left: 30%;">
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_16.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_17.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_18.svg">
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <p class="Item_Category">Dairy, Bread & Eggs</p>
+                            <h5 class="card-title">Britannia Cheese Slices</h5>
+
+                            <div class="Rating d-flex gap-2 align-items-baseline">
+                                <div>
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_20.svg">
+                                </div>
+
+                                <p>4.3 <span>(4)</span></p>
+                            </div>
+
+                            <div class="Prize_Add d-flex align-items-end justify-content-between mt-2">
+                                <h6 class="Item_Prize">$21.6 <del id="old_Prize">$24</del></h6>
+                                <button class="btn border-0 text-white" style="background-color: rgb(10, 173, 10);">+
+                                    Add</button>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col mb-3">
+                    <div class="card h-100 Popular-Item">
+                        <img src="Images/Section_6_Image_10.jpg" class="card-img-top p-3 position-relative">
+                        <span class="position-absolute translate-middle badge rounded bg-success"
+                            style="top: 2rem; left: 2rem;">
+                            15%
+                        </span>
+                        <div class="Hover_Images fill-white position-absolute d-none" style="top: 50%; left: 30%;">
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_16.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_17.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_18.svg">
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <p class="Item_Category">Instant Food</p>
+                            <h5 class="card-title">Kellogg's Original Cereals</h5>
+
+                            <div class="Rating d-flex gap-2 align-items-baseline">
+                                <div>
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_20.svg">
+                                </div>
+
+                                <p>4.3 <span>(4)</span></p>
+                            </div>
+
+                            <div class="Prize_Add d-flex align-items-end justify-content-between mt-2">
+                                <h6 class="Item_Prize">$21.6 <del id="old_Prize">$24</del></h6>
+                                <button class="btn border-0 text-white" style="background-color: rgb(10, 173, 10);">+
+                                    Add</button>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col mb-3">
+                    <div class="card h-100 Popular-Item">
+                        <img src="Images/Section_6_Image_11.jpg" class="card-img-top p-3">
+                        <div class="Hover_Images fill-white position-absolute d-none" style="top: 50%; left: 30%;">
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_16.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_17.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_18.svg">
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <p class="Item_Category">Bakery & Biscuits</p>
+                            <h5 class="card-title">NutriChoice Digestive</h5>
+
+                            <div class="Rating d-flex gap-2 align-items-baseline">
+                                <div>
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_20.svg">
+                                </div>
+
+                                <p>4.3 <span>(4)</span></p>
+                            </div>
+
+                            <div class="Prize_Add d-flex align-items-end justify-content-between mt-2">
+                                <h6 class="Item_Prize">$21.6 <del id="old_Prize">$24</del></h6>
+                                <button class="btn border-0 text-white" style="background-color: rgb(10, 173, 10);">+
+                                    Add</button>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col mb-3">
+                    <div class="card h-100 Popular-Item">
+                        <img src="Images/Section_6_Image_12.jpg" class="card-img-top p-3">
+                        <div class="Hover_Images fill-white position-absolute d-none" style="top: 50%; left: 30%;">
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_16.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_17.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_18.svg">
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <p class="Item_Category">Snack & Munchies</p>
+                            <h5 class="card-title">Slurrp Millet Chocolate</h5>
+
+                            <div class="Rating d-flex gap-2 align-items-baseline">
+                                <div>
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_20.svg">
+                                </div>
+
+                                <p>4.3 <span>(4)</span></p>
+                            </div>
+
+                            <div class="Prize_Add d-flex align-items-end justify-content-between mt-2">
+                                <h6 class="Item_Prize">$21.6 <del id="old_Prize">$24</del></h6>
+                                <button class="btn border-0 text-white" style="background-color: rgb(10, 173, 10);">+
+                                    Add</button>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col mb-3">
+                    <div class="card h-100 Popular-Item">
+                        <img src="Images/Section_6_Image_13.jpg" class="card-img-top p-3 position-relative">
+                        <span class="position-absolute translate-middle badge rounded bg-success"
+                            style="top: 2rem; left: 2rem;">
+                            25%
+                        </span>
+                        <div class="Hover_Images fill-white position-absolute d-none" style="top: 50%; left: 30%;">
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_16.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_17.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_18.svg">
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <p class="Item_Category">Dairy, Bread & Eggs</p>
+                            <h5 class="card-title">Amul Butter - 500 g</h5>
+
+                            <div class="Rating d-flex gap-2 align-items-baseline">
+                                <div>
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_20.svg">
+                                </div>
+
+                                <p>4.3 <span>(4)</span></p>
+                            </div>
+
+                            <div class="Prize_Add d-flex align-items-end justify-content-between mt-2">
+                                <h6 class="Item_Prize">$21.6 <del id="old_Prize">$24</del></h6>
+                                <button class="btn border-0 text-white" style="background-color: rgb(10, 173, 10);">+
+                                    Add</button>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col mb-3">
+                    <div class="card h-100 Popular-Item">
+                        <img src="Images/Section_6_Image_14.jpg" class="card-img-top p-3">
+                        <div class="Hover_Images fill-white position-absolute d-none" style="top: 50%; left: 30%;">
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_16.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_17.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_18.svg">
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <p class="Item_Category">Bakery & Biscuits</p>
+                            <h5 class="card-title">NutriChoice Digestive</h5>
+
+                            <div class="Rating d-flex gap-2 align-items-baseline">
+                                <div>
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_20.svg">
+                                </div>
+
+                                <p>4.3 <span>(4)</span></p>
+                            </div>
+
+                            <div class="Prize_Add d-flex align-items-end justify-content-between mt-2">
+                                <h6 class="Item_Prize">$21.6 <del id="old_Prize">$24</del></h6>
+                                <button class="btn border-0 text-white" style="background-color: rgb(10, 173, 10);">+
+                                    Add</button>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col mb-3">
+                    <div class="card h-100 Popular-Item">
+                        <img src="Images/Section_6_Image_12.jpg" class="card-img-top p-3">
+                        <div class="Hover_Images fill-white position-absolute d-none" style="top: 50%; left: 30%;">
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_16.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_17.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_18.svg">
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <p class="Item_Category">Snack & Munchies</p>
+                            <h5 class="card-title">Slurrp Millet Chocolate</h5>
+
+                            <div class="Rating d-flex gap-2 align-items-baseline">
+                                <div>
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_19.svg">
+                                    <img src="Images/Section_6_Image_20.svg">
+                                </div>
+
+                                <p>4.3 <span>(4)</span></p>
+                            </div>
+
+                            <div class="Prize_Add d-flex align-items-end justify-content-between mt-2">
+                                <h6 class="Item_Prize">$21.6 <del id="old_Prize">$24</del></h6>
+                                <button class="btn border-0 text-white" style="background-color: rgb(10, 173, 10);">+
+                                    Add</button>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="px-lg-0 px-md-3 px-sm-2 px-2 mt-5">
+            <h2 class="px-5 fs-3 fs-md-2">Daily Best Sells</h2>
+            <div class="row g-3 g-md-4 g-lg-5 m-0 px-4">
+                <div class="col-12 col-md-6 col-lg-3 d-flex">
+                    <div class="Section_7_Box p-4 p-lg-5 w-100 d-flex flex-column justify-content-baseline"
+                        style="background-image: url(Images/Section_7_Image_1.jpg); background-size: cover; background-position: center; min-height: 350px;">
+                        <h2 class="text-white fs-4 fs-lg-3 pb-2 pb-lg-3">100% Organic Coffee Beans.</h2>
+                        <h5 class="text-white fs-6 fs-lg-5 pb-2 pb-lg-3">Get the best deal before close.</h5>
+                        <button type="button" class="btn border-0 text-white align-self-start"
+                            style="background-color: rgb(10, 173, 10);">Shop Now <img src="Images/Section_3_Image_5.svg"
+                                alt=""></button>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 d-flex">
+                    <div class="card w-100 Best-Item">
+                        <img src="Images/Section_7_Image_2.jpg" class="card-img-top p-3 img-fluid position-relative"
+                            style="height: 200px; object-fit: contain;">
+                        <div class="Hover_Images fill-white position-absolute d-none" style="top: 30%; left: 30%;">
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_16.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_17.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_18.svg">
+                            </button>
+                        </div>
+                        <div class="Section_7_card-body p-3 d-flex flex-column" style="min-height: 250px;">
+                            <div>
+                                <p class="Item_Category opacity-50 mb-1 fs-7">Tea, Coffee & Drinks</p>
+                                <h5 class="card-title mb-2 fs-6">Roast Ground Coffee</h5>
+                                <div class="Prize_Add d-flex align-items-center justify-content-between mb-3">
+                                    <h6 class="Item_Prize mb-0 fs-6">$13.5 <del id="old_Prize"
+                                            class="opacity-75 fs-7">$18</del></h6>
+                                    <div class="Rating d-flex align-items-baseline">
+                                        <img src="Images/Section_6_Image_19.svg" alt="star" class="img-fluid"
+                                            style="width: 14px;">
+                                        <img src="Images/Section_6_Image_19.svg" alt="star" class="img-fluid"
+                                            style="width: 14px;">
+                                        <img src="Images/Section_6_Image_19.svg" alt="star" class="img-fluid"
+                                            style="width: 14px;">
+                                        <img src="Images/Section_6_Image_19.svg" alt="star" class="img-fluid"
+                                            style="width: 14px;">
+                                        <img src="Images/Section_6_Image_20.svg" alt="half-star" class="img-fluid"
+                                            style="width: 14px;">
+                                        <small class="ms-1 fs-7">4.3 <span>(4)</span></small>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn border-0 text-white w-100 py-2 mb-3 mt-auto"
+                                style="background-color: rgb(10, 173, 10);">+ Add</button>
+                            <div class="text-center mt-auto">
+                                <div class="row g-1">
+                                    <div class="col-6 col-xl-3 col-xxl-4">
+                                        <div class="card h-100 Popular-Item">
+                                            <div class="card-body m-0 p-1 p-sm-2">
+                                                <h5 class="card-title mb-0 fs-6">1292</h5>
+                                                <p class="card-text mb-0 fs-7"><small>Days</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-xl-3 col-xxl-4">
+                                        <div class="card h-100 Popular-Item">
+                                            <div class="card-body m-0 p-1 p-sm-2">
+                                                <h5 class="card-title mb-0 fs-6">3</h5>
+                                                <p class="card-text mb-0 fs-7"><small>Hours</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-xl-3 col-xxl-4">
+                                        <div class="card h-100 Popular-Item">
+                                            <div class="card-body m-0 p-1 p-sm-2">
+                                                <h5 class="card-title mb-0 fs-6">14</h5>
+                                                <p class="card-text mb-0 fs-7"><small>Mins</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-xl-3 col-xxl-12">
+                                        <div class="card h-100 Popular-Item">
+                                            <div class="card-body m-0 p-1 p-sm-2">
+                                                <h5 class="card-title mb-0 fs-6">32</h5>
+                                                <p class="card-text mb-0 fs-7"><small>Sec</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 d-flex">
+                    <div class="card w-100 Best-Item">
+                        <img src="Images/Section_7_Image_3.jpg" class="card-img-top p-3 img-fluid position-relative"
+                            style="height: 200px; object-fit: contain;">
+                        <div class="Hover_Images fill-white position-absolute d-none" style="top: 30%; left: 30%;">
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_16.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_17.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_18.svg">
+                            </button>
+                        </div>
+                        <div class="Section_7_card-body p-3 d-flex flex-column" style="min-height: 250px;">
+                            <div>
+                                <p class="Item_Category opacity-50 mb-1 fs-7">Fruits & Vegetables</p>
+                                <h5 class="card-title mb-2 fs-6">Crushed Tomatoes</h5>
+                                <div class="Prize_Add d-flex align-items-center justify-content-between mb-3">
+                                    <h6 class="Item_Prize mb-0 fs-6">$13.5 <del id="old_Prize"
+                                            class="opacity-75 fs-7">$18</del></h6>
+                                    <div class="Rating d-flex align-items-baseline">
+                                        <img src="Images/Section_6_Image_19.svg" alt="star" class="img-fluid"
+                                            style="width: 14px;">
+                                        <img src="Images/Section_6_Image_19.svg" alt="star" class="img-fluid"
+                                            style="width: 14px;">
+                                        <img src="Images/Section_6_Image_19.svg" alt="star" class="img-fluid"
+                                            style="width: 14px;">
+                                        <img src="Images/Section_6_Image_19.svg" alt="star" class="img-fluid"
+                                            style="width: 14px;">
+                                        <img src="Images/Section_6_Image_20.svg" alt="half-star" class="img-fluid"
+                                            style="width: 14px;">
+                                        <small class="ms-1 fs-7">4.3 <span>(4)</span></small>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn border-0 text-white w-100 py-2 mb-3 mt-auto"
+                                style="background-color: rgb(10, 173, 10);">+ Add</button>
+                            <div class="text-center mt-auto">
+                                <div class="row g-1">
+                                    <div class="col-6 col-xl-3 col-xxl-4">
+                                        <div class="card h-100 Popular-Item">
+                                            <div class="card-body m-0 p-1 p-sm-2">
+                                                <h5 class="card-title mb-0 fs-6">1292</h5>
+                                                <p class="card-text mb-0 fs-7"><small>Days</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-xl-3 col-xxl-4">
+                                        <div class="card h-100 Popular-Item">
+                                            <div class="card-body m-0 p-1 p-sm-2">
+                                                <h5 class="card-title mb-0 fs-6">3</h5>
+                                                <p class="card-text mb-0 fs-7"><small>Hours</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-xl-3 col-xxl-4">
+                                        <div class="card h-100 Popular-Item">
+                                            <div class="card-body m-0 p-1 p-sm-2">
+                                                <h5 class="card-title mb-0 fs-6">14</h5>
+                                                <p class="card-text mb-0 fs-7"><small>Mins</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-xl-3 col-xxl-12">
+                                        <div class="card h-100 Popular-Item">
+                                            <div class="card-body m-0 p-1 p-sm-2">
+                                                <h5 class="card-title mb-0 fs-6">32</h5>
+                                                <p class="card-text mb-0 fs-7"><small>Sec</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 d-flex">
+                    <div class="card w-100 Best-Item">
+                        <img src="Images/Section_7_Image_4.jpg" class="card-img-top p-3 img-fluid position-relative"
+                            style="height: 200px; object-fit: contain;">
+                        <div class="Hover_Images fill-white position-absolute d-none" style="top: 30%; left: 30%;">
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_16.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_17.svg">
+                            </button>
+                            <button class="Hover-Button btn bg-white border border-dark-subtle">
+                                <img src="Images/Section_6_Image_18.svg">
+                            </button>
+                        </div>
+                        <div class="Section_7_card-body p-3 d-flex flex-column" style="min-height: 250px;">
+                            <div>
+                                <p class="Item_Category opacity-50 mb-1 fs-7">Fruits & Vegetables</p>
+                                <h5 class="card-title mb-2 fs-6">Golden Pineapple</h5>
+                                <div class="Prize_Add d-flex align-items-center justify-content-between mb-3">
+                                    <h6 class="Item_Prize mb-0 fs-6">$14.4 <del id="old_Prize"
+                                            class="opacity-75 fs-7">$18</del></h6>
+                                    <div class="Rating d-flex align-items-baseline">
+                                        <img src="Images/Section_6_Image_19.svg" alt="star" class="img-fluid"
+                                            style="width: 14px;">
+                                        <img src="Images/Section_6_Image_19.svg" alt="star" class="img-fluid"
+                                            style="width: 14px;">
+                                        <img src="Images/Section_6_Image_19.svg" alt="star" class="img-fluid"
+                                            style="width: 14px;">
+                                        <img src="Images/Section_6_Image_19.svg" alt="star" class="img-fluid"
+                                            style="width: 14px;">
+                                        <img src="Images/Section_6_Image_20.svg" alt="half-star" class="img-fluid"
+                                            style="width: 14px;">
+                                        <small class="ms-1 fs-7">4.3 <span>(4)</span></small>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn border-0 text-white w-100 py-2 mb-3 mt-auto"
+                                style="background-color: rgb(10, 173, 10);">+ Add</button>
+                            <div class="text-center mt-auto">
+                                <div class="row g-1">
+                                    <div class="col-6 col-xl-3 col-xxl-4">
+                                        <div class="card h-100 Popular-Item">
+                                            <div class="card-body m-0 p-1 p-sm-2">
+                                                <h5 class="card-title mb-0 fs-6">1292</h5>
+                                                <p class="card-text mb-0 fs-7"><small>Days</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-xl-3 col-xxl-4">
+                                        <div class="card h-100 Popular-Item">
+                                            <div class="card-body m-0 p-1 p-sm-2">
+                                                <h5 class="card-title mb-0 fs-6">3</h5>
+                                                <p class="card-text mb-0 fs-7"><small>Hours</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-xl-3 col-xxl-4">
+                                        <div class="card h-100 Popular-Item">
+                                            <div class="card-body m-0 p-1 p-sm-2">
+                                                <h5 class="card-title mb-0 fs-6">14</h5>
+                                                <p class="card-text mb-0 fs-7"><small>Mins</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-xl-3 col-xxl-12">
+                                        <div class="card h-100 Popular-Item">
+                                            <div class="card-body m-0 p-1 p-sm-2">
+                                                <h5 class="card-title mb-0 fs-6">32</h5>
+                                                <p class="card-text mb-0 fs-7"><small>Sec</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-4 m-0">
+                <div class="col p-0 mb-2 px-lg-5">
+                    <div class="card h-100 border-0" style="width: 22rem;">
+                        <div class="card-body d-flex flex-column align-items-start justify-content-start">
+                            <img src="Images/Section_8_Image_1.svg" class="card-img-left" alt="...">
+                            <h5 class="card-title">10 minute grocery now</h5>
+                            <p class="card-text text-start">Get your order delivered to your doorstep at the earliest
+                                from
+                                FreshCart
+                                pickup stores near you.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-2 p-0 px-lg-3">
+                    <div class="card h-100 border-0" style="width: 22rem;">
+                        <div class="card-body d-flex flex-column align-items-start justify-content-center">
+                            <img src="Images/Section_8_Image_2.svg" class="card-img-left" alt="...">
+                            <h5 class="card-title">Best Prices & Offers</h5>
+                            <p class="card-text text-start">Cheaper prices than your local supermarket, great cashback
+                                offers to top it off. Get best pricess & offers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-2 p-0 px-lg-3">
+                    <div class="card h-100 border-0" style="width: 22rem;">
+                        <div class="card-body d-flex flex-column align-items-start justify-content-center">
+                            <img src="Images/Section_8_Image_3.svg" class="card-img-left" alt="...">
+                            <h5 class="card-title">Wide Assortment</h5>
+                            <p class="card-text text-start">Choose from 5000+ products across food, personal care,
+                                household, bakery, veg and non-veg & other categories.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-2 p-0 px-lg-5">
+                    <div class="card h-100 border-0" style="width: 22rem;">
+                        <div class="card-body d-flex flex-column align-items-start justify-content-center">
+                            <img src="Images/Section_8_Image_4.svg" class="card-img-left" alt="...">
+                            <h5 class="card-title">Easy Returns</h5>
+                            <p class="card-text text-start">Not satisfied with a product? Return it at the doorstep &
+                                get a
+                                refund within hours. No questions asked policy .</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-body-secondary px-lg-4 px-md-3 px-sm-2 px-2 mt-5 py-5">
+            <div class="row py-5 row-cols-2 row-cols-sm-2 row-cols-md-4 row-cols-lg-6 m-0">
+                <div class="col">
+                    <div class="footer_Box" style="width: 10rem;">
+                        <p class="fw-bold">Categories</p>
+                        <p><a href="#" class="text-black text-decoration-none">Vegetables & Fruits</a></p>
+                        <p><a href="#" class="text-black text-decoration-none">Breakfast & instant food</a></p>
+                        <p><a href="#" class="text-black text-decoration-none">Bakery & Biscuits</a></p>
+                        <p><a href="#" class="text-black text-decoration-none">Atta, rice & dal</a></p>
+                        <p><a href="#" class="text-black text-decoration-none">Sauces & spreads</a></p>
+                        <p><a href="#" class="text-black text-decoration-none">Organic & gourmet</a></p>
+                        <p><a href="#" class="text-black text-decoration-none">Baby care</a></p>
+                        <p><a href="#" class="text-black text-decoration-none">Cleaning essentials</a></p>
+                        <p><a href="#" class="text-black text-decoration-none">Personal care</a></p>
+                    </div>
+                </div>
+
+                <div class="d-none d-md-block d-lg-none"></div>
+
+                <div class="col">
+                    <div class="footer_Box" style="width: 10rem;">
+                        <br>
+                        <p class="fw-bold"></p>
+                        <p><a href="#" class="text-black text-decoration-none">Dairy, bread & eggs</a></p>
+                        <p><a href="#" class="text-black text-decoration-none">Cold drinks & juices</a></p>
+                        <p><a href="#" class="text-black text-decoration-none">Tea, coffee & drinks</a></p>
+                        <p><a href="#" class="text-black text-decoration-none">Masala, oil & more</a></p>
+                        <p><a href="#" class="text-black text-decoration-none">Chicken, meat & fish</a></p>
+                        <p><a href="#" class="text-black text-decoration-none">Paan corner</a></p>
+                        <p><a href="#" class="text-black text-decoration-none">Pharma & wellness</a></p>
+                        <p><a href="#" class="text-black text-decoration-none">Home & office</a></p>
+                        <p><a href="#" class="text-black text-decoration-none">Pet care</a></p>
+                    </div>
+                </div>
+
+                <div class="d-none d-md-block d-lg-none"></div>
+
+                <div class="col">
+                    <div class="footer_Box" style="width: 10rem;">
+                        <p class="fw-bold">Get to know us</p>
+                        <p><a href="#" class="text-black text-decoration-none">Company</a></p>
+                        <p><a href="#" class="text-black text-decoration-none">About</a></p>
+                        <p><a href="#" class="text-black text-decoration-none">Blog</a></p>
+                        <p><a href="#" class="text-black text-decoration-none">Help Center</a></p>
+                        <p><a href="#" class="text-black text-decoration-none">Our Value</a></p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="footer_Box" style="width: 10rem;">
+                        <p class="fw-bold">For Consumers</p>
+                        <p><a href="#" class="text-black text-decoration-none">Payments</a></p>
+                        <p><a href="#" class="text-black text-decoration-none">Shipping</a></p>
+                        <p><a href="#" class="text-black text-decoration-none">Product Returns</a></p>
+                        <p><a href="#" class="text-black text-decoration-none">FAQ</a></p>
+                        <p><a href="#" class="text-black text-decoration-none">Shop Checkout</a></p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="footer_Box" style="width: 10rem;">
+                        <p class="fw-bold">Become a Shopper</p>
+                        <p><a href="#" class="text-black text-decoration-none">Shopper Opportunities</a></p>
+                        <p><a href="#" class="text-black text-decoration-none">Become a Shopper</a></p>
+                        <p><a href="#" class="text-black text-decoration-none">Earnings</a></p>
+                        <p><a href="#" class="text-black text-decoration-none">Ideas & Guides</a></p>
+                        <p><a href="#" class="text-black text-decoration-none">New Retailers</a></p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="footer_Box" style="width: 10rem;">
+                        <p class="fw-bold">Freshcart programs</p>
+                        <p><a href="#" class="text-black text-decoration-none">Freshcart programs</a></p>
+                        <p><a href="#" class="text-black text-decoration-none">Gift Cards</a></p>
+                        <p><a href="#" class="text-black text-decoration-none">Promos & Coupons</a></p>
+                        <p><a href="#" class="text-black text-decoration-none">Freshcart Ads</a></p>
+                        <p><a href="#" class="text-black text-decoration-none">Careers</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="py-2 border-bottom border-top border-dark-subtle">
+                <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 align-items-center g-4 m-0">
+                    <div
+                        class="col d-flex flex-column flex-md-row justify-content-md-center justify-content-lg-start align-items-center gap-3">
+                        <p class="fs-4 fw-bold mb-0">Payment Partners</p>
+                        <div class="d-flex flex-wrap gap-3 justify-content-center">
+                            <img src="Images/Footer_Image_1.svg" alt="Payment Partner" class="img-fluid"
+                                style="height: 30px;">
+                            <img src="Images/Footer_Image_2.svg" alt="Payment Partner" class="img-fluid"
+                                style="height: 30px;">
+                            <img src="Images/Footer_Image_3.svg" alt="Payment Partner" class="img-fluid"
+                                style="height: 30px;">
+                            <img src="Images/Footer_Image_4.svg" alt="Payment Partner" class="img-fluid"
+                                style="height: 30px;">
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="d-flex flex-column flex-md-row align-items-center justify-content-md-center gap-3">
+                            <p class="fs-4 fw-bold mb-0 text-center text-md-start">Get deliveries with FreshCart</p>
+                            <div class="d-flex gap-2">
+                                <img src="Images/Footer_Image_5.svg" alt="App Store" class="img-fluid"
+                                    style="height: 40px;">
+                                <img src="Images/Footer_Image_6.svg" alt="Play Store" class="img-fluid"
+                                    style="height: 40px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="py-3">
+                <div class="row align-items-center m-0">
+                    <div class="col-12 col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <p class="mb-0 text-muted">
+                            © 2022 - 2025 FreshCart eCommerce HTML Template. All rights reserved.
+                            Powered by <span style="color: rgb(10, 173, 10);">Codescandy.</span>
+                        </p>
+                    </div>
+
+                    <div class="col-12 col-md-6 text-center text-md-end">
+                        <div class="d-flex align-items-center justify-content-center justify-content-md-end gap-3">
+                            <p class="mb-0 text-muted">Follow us on</p>
+                            <a href="#" class="border border-dark-subtle rounded p-2 text-decoration-none">
+                                <img src="Images/Footer_Image_7.svg" alt="Facebook" class="img-fluid"
+                                    style="height: 20px;">
+                            </a>
+                            <a href="#" class="border border-dark-subtle rounded p-2 text-decoration-none">
+                                <img src="Images/Footer_Image_8.svg" alt="Twitter" class="img-fluid"
+                                    style="height: 20px;">
+                            </a>
+                            <a href="#" class="border border-dark-subtle rounded p-2 text-decoration-none">
+                                <img src="Images/Footer_Image_9.svg" alt="Instagram" class="img-fluid"
+                                    style="height: 20px;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button"
+                class="btn btn-dark fw-bold position-fixed bottom-0 end-0 mb-3 me-3 d-flex align-items-center gap-2 shadow-lg"
+                style="z-index: 1000;">
+                <img src="Images/Buy_Now_Button_Image_1.svg" alt="Buy Now" width="20" height="20">
+                <span>Buy Now</span>
+            </button>
+        </div>
+    </div>
+
+
+
+    <script>
+        document.getElementById('toggleButton').addEventListener('click', function () {
+            document.querySelector('.upper').style.display = 'none';
+            document.querySelector('.Nav_Bar').style.display = 'none';
+            document.querySelector('.Web-Body').style.display = 'none';
+
+            document.querySelector('.Second_Nav_Bar').style.display = 'block';
+        });
+
+        document.getElementById('closeButton').addEventListener('click', function () {
+            document.querySelector('.upper').style.display = 'block';
+            document.querySelector('.Nav_Bar').style.display = 'block';
+            document.querySelector('.Web-Body').style.display = 'block';
+
+            document.querySelector('.Second_Nav_Bar').style.display = 'none';
+        });
+    </script>
+</body>
+
+</html>

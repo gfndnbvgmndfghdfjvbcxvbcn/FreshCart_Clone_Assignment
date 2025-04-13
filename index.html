@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
+    <link rel="shortcut icon" type="image/x-icon" href="Images/favicon.ico">
+    <title>Home | FreshCart - eCommerce Theme</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script type="text/javascript" src="https://livejs.com/live.js"></script>
@@ -135,7 +136,7 @@
 
         <nav class="navbar bg-body-white d-none d-md-none d-lg-block d-sm-block">
             <div class="d-flex justify-content-start bg-body-white">
-                <div class="nav-dropdown px-2">
+                <div class="nav-dropdown">
                     <button class="btn text-white border-0 dropdown-toggle" style="background-color: rgb(10, 173, 10);"
                         type="button">
                         <img src="Images/Section_2_Image_6.svg" alt=""> All Department
@@ -151,7 +152,7 @@
                     </ul>
                 </div>
 
-                <div class="nav-dropdown px-2">
+                <div class="nav-dropdown">
                     <button class="btn bg-body-white text-black border-0 dropdown-toggle" type="button">Home</button>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item text-end" href="#">Home Default</a></li>
@@ -162,7 +163,7 @@
                     </ul>
                 </div>
 
-                <div class="nav-dropdown px-2">
+                <div class="nav-dropdown">
                     <button class="btn bg-body-white text-black border-0 dropdown-toggle" type="button">Shop</button>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item text-end" href="#">Shop Grid - Filter</a></li>
@@ -177,7 +178,7 @@
                     </ul>
                 </div>
 
-                <div class="nav-dropdown px-2">
+                <div class="nav-dropdown">
                     <button class="btn bg-body-white text-black border-0 dropdown-toggle" type="button">Stores</button>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item text-end" href="#">Store List</a></li>
@@ -186,7 +187,7 @@
                     </ul>
                 </div>
 
-                <div class="nav-dropdown px-2">
+                <div class="nav-dropdown">
                     <button class="btn bg-body-white text-black border-0 dropdown-toggle" type="button">Mega
                         Menu</button>
                     <ul class="dropdown-menu">
@@ -194,7 +195,7 @@
                     </ul>
                 </div>
 
-                <div class="nav-dropdown px-2">
+                <div class="nav-dropdown">
                     <button class="btn bg-body-white text-black border-0 dropdown-toggle" type="button">Pages</button>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item text-end" href="#">Blog</a></li>
@@ -206,7 +207,7 @@
                     </ul>
                 </div>
 
-                <div class="nav-dropdown px-2">
+                <div class="nav-dropdown">
                     <button class="btn bg-body-white text-black border-0 dropdown-toggle" type="button">Account</button>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item text-end" href="#">Sign in</a></li>
@@ -225,11 +226,11 @@
                     </ul>
                 </div>
 
-                <div class="nav-dropdown px-2">
+                <div class="nav-dropdown">
                     <button class="btn bg-body-white text-black border-0" type="button">Dashboard</button>
                 </div>
 
-                <div class="nav-dropdown px-2">
+                <div class="nav-dropdown">
                     <button class="btn bg-body-white text-black border-0 dropdown-toggle" type="button">Docs</button>
                     <div class="dropdown-menu">
                         <button class="btn bg-body-white text-black border-0 d-flex align-items-center">
@@ -259,8 +260,17 @@
                 <button type="button" class="btn btn-close" id="closeButton"></button>
 
                 <form class="d-flex justify-content-center w-100" role="search">
-                    <input class="form-control me-2 outline-light border-dark-subtle w-100" type="search"
-                        placeholder="Search for products" aria-label="Search">
+                    <div class="position-relative w-50 d-md-none d-lg-block">
+                        <input class="Search_Bar form-control me-2 border-dark-subtle ps-5" type="search"
+                            placeholder="Search for products" aria-label="Search"
+                            style="outline-color: rgb(10, 173, 10);">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-3 text-secondary"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </div>
                 </form>
 
                 <div class="d-flex flex-column bg-body-white">
@@ -561,7 +571,7 @@
 
         <div class="px-2 px-md-3 px-lg-5">
             <h2 class="ps-2">Popular Products</h2>
-            <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-3 m-0">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-3 m-0">
                 <div class="col mb-3">
                     <div class="card h-100 Popular-Item">
                         <img src="Images/Section_6_Image_1.jpg" class="card-img-top p-3 position-relative">
@@ -1197,7 +1207,7 @@
                             </button>
                         </div>
                         <div class="card-body">
-                            <p class="Item_Category">Snack & Munchies</p>
+                            <p class="Item_Category fs-6">Snack & Munchies</p>
                             <h5 class="card-title">Slurrp Millet Chocolate</h5>
 
                             <div class="Rating d-flex gap-2 align-items-baseline">
@@ -1224,10 +1234,11 @@
             </div>
         </div>
 
-        <div class="px-lg-0 px-md-3 px-sm-2 px-2 mt-5">
-            <h2 class="px-5 fs-3 fs-md-2">Daily Best Sells</h2>
-            <div class="row g-3 g-md-4 g-lg-5 m-0 px-4">
-                <div class="col-12 col-md-6 col-lg-3 d-flex">
+        <div class="mt-5">
+            <h2 class="px-3 px-lg-5 fs-3 fs-md-2">Daily Best Sells</h2>
+            <div class="row g-3 g-md-4 g-lg-5 m-0 px-2 px-lg-4">
+                <!-- First box - full width on md, half on lg, quarter on xxl -->
+                <div class="col-12 col-md-12 col-lg-6 col-xxl-3 d-flex">
                     <div class="Section_7_Box p-4 p-lg-5 w-100 d-flex flex-column justify-content-baseline"
                         style="background-image: url(Images/Section_7_Image_1.jpg); background-size: cover; background-position: center; min-height: 350px;">
                         <h2 class="text-white fs-4 fs-lg-3 pb-2 pb-lg-3">100% Organic Coffee Beans.</h2>
@@ -1238,7 +1249,8 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 d-flex">
+                <!-- Second box - half width on lg, quarter on xxl -->
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xxl-3 d-flex">
                     <div class="card w-100 Best-Item">
                         <img src="Images/Section_7_Image_2.jpg" class="card-img-top p-3 img-fluid position-relative"
                             style="height: 200px; object-fit: contain;">
@@ -1317,7 +1329,8 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 d-flex">
+                <!-- Third box - half width on lg, quarter on xxl -->
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xxl-3 d-flex">
                     <div class="card w-100 Best-Item">
                         <img src="Images/Section_7_Image_3.jpg" class="card-img-top p-3 img-fluid position-relative"
                             style="height: 200px; object-fit: contain;">
@@ -1396,7 +1409,8 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3 d-flex">
+                <!-- Fourth box - half width on lg, quarter on xxl -->
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xxl-3 d-flex">
                     <div class="card w-100 Best-Item">
                         <img src="Images/Section_7_Image_4.jpg" class="card-img-top p-3 img-fluid position-relative"
                             style="height: 200px; object-fit: contain;">
@@ -1478,20 +1492,20 @@
         </div>
 
         <div class="mt-5">
-            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-4 m-0">
-                <div class="col p-0 mb-2 px-lg-5">
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xxl-4 m-0">
+                <div class="col p-0 mb-2 px-lg-5 px-xxl-3">
                     <div class="card h-100 border-0" style="width: 22rem;">
                         <div class="card-body d-flex flex-column align-items-start justify-content-start">
                             <img src="Images/Section_8_Image_1.svg" class="card-img-left" alt="...">
                             <h5 class="card-title">10 minute grocery now</h5>
                             <p class="card-text text-start">Get your order delivered to your doorstep at the earliest
                                 from
-                                FreshCart
-                                pickup stores near you.</p>
+                                FreshCart pickup stores near you.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col mb-2 p-0 px-lg-3">
+
+                <div class="col mb-2 p-0 px-lg-3 px-xxl-3">
                     <div class="card h-100 border-0" style="width: 22rem;">
                         <div class="card-body d-flex flex-column align-items-start justify-content-center">
                             <img src="Images/Section_8_Image_2.svg" class="card-img-left" alt="...">
@@ -1501,7 +1515,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col mb-2 p-0 px-lg-3">
+
+                <div class="col mb-2 p-0 px-lg-5 px-xxl-3">
                     <div class="card h-100 border-0" style="width: 22rem;">
                         <div class="card-body d-flex flex-column align-items-start justify-content-center">
                             <img src="Images/Section_8_Image_3.svg" class="card-img-left" alt="...">
@@ -1511,14 +1526,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="col mb-2 p-0 px-lg-5">
+
+                <div class="col mb-2 p-0 px-lg-0 px-xxl-3">
                     <div class="card h-100 border-0" style="width: 22rem;">
                         <div class="card-body d-flex flex-column align-items-start justify-content-center">
                             <img src="Images/Section_8_Image_4.svg" class="card-img-left" alt="...">
                             <h5 class="card-title">Easy Returns</h5>
                             <p class="card-text text-start">Not satisfied with a product? Return it at the doorstep &
                                 get a
-                                refund within hours. No questions asked policy .</p>
+                                refund within hours. No questions asked policy.</p>
                         </div>
                     </div>
                 </div>
@@ -1608,25 +1624,28 @@
             </div>
 
             <div class="py-2 border-bottom border-top border-dark-subtle">
-                <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 align-items-center g-4 m-0">
-                    <div
-                        class="col d-flex flex-column flex-md-row justify-content-md-center justify-content-lg-start align-items-center gap-3">
-                        <p class="fs-4 fw-bold mb-0">Payment Partners</p>
-                        <div class="d-flex flex-wrap gap-3 justify-content-center">
-                            <img src="Images/Footer_Image_1.svg" alt="Payment Partner" class="img-fluid"
-                                style="height: 30px;">
-                            <img src="Images/Footer_Image_2.svg" alt="Payment Partner" class="img-fluid"
-                                style="height: 30px;">
-                            <img src="Images/Footer_Image_3.svg" alt="Payment Partner" class="img-fluid"
-                                style="height: 30px;">
-                            <img src="Images/Footer_Image_4.svg" alt="Payment Partner" class="img-fluid"
-                                style="height: 30px;">
+                <div class="text">
+                    <div class="row row-cols-1 row-cols-xxl-2 align-items-center g-4 m-0">
+                        <!-- Payment Partners (Left on xxl, centered on smaller screens) -->
+                        <div
+                            class="col d-flex flex-column flex-md-row justify-content-center justify-content-xxl-start align-items-center gap-3">
+                            <p class="fs-4 fw-bold mb-0">Payment Partners</p>
+                            <div class="d-flex flex-wrap gap-3 justify-content-center">
+                                <img src="Images/Footer_Image_1.svg" alt="Payment Partner" class="img-fluid"
+                                    style="height: 30px;">
+                                <img src="Images/Footer_Image_2.svg" alt="Payment Partner" class="img-fluid"
+                                    style="height: 30px;">
+                                <img src="Images/Footer_Image_3.svg" alt="Payment Partner" class="img-fluid"
+                                    style="height: 30px;">
+                                <img src="Images/Footer_Image_4.svg" alt="Payment Partner" class="img-fluid"
+                                    style="height: 30px;">
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="col">
-                        <div class="d-flex flex-column flex-md-row align-items-center justify-content-md-center gap-3">
-                            <p class="fs-4 fw-bold mb-0 text-center text-md-start">Get deliveries with FreshCart</p>
+                        <!-- App Download (Right on xxl, centered on smaller screens) -->
+                        <div
+                            class="col d-flex flex-column flex-md-row justify-content-center justify-content-xxl-end align-items-center gap-3">
+                            <p class="fs-4 fw-bold mb-0 text-center text-md-end">Get deliveries with FreshCart</p>
                             <div class="d-flex gap-2">
                                 <img src="Images/Footer_Image_5.svg" alt="App Store" class="img-fluid"
                                     style="height: 40px;">
